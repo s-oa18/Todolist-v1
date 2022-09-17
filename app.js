@@ -24,19 +24,17 @@ app.get("/", function (req, res) {
 app.post("/", function (req, res) {
   let item = req.body.newItem;
 
-  items.push(item);
-
-  res.redirect("/");
+  if (req.body.list === "work") {
+    workItems.push(item);
+    res.redirect("/work");
+  } else {
+    items.push(item);
+    res.redirect("/");
+  }
 });
 
 app.get("/work", function (req, res) {
   res.render("list", { listTitle: "Work List", newListItems: workItems });
-});
-
-app.post("/work", function (req, res) {
-  let item = req.body.newItem;
-  workItems.push(item);
-  res.redirect("/work");
 });
 
 app.listen(3000, function () {
