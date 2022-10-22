@@ -87,23 +87,47 @@ app.get("/:customListName", function (req, res) {
 app.post("/", function (req, res) {
   const itemName = req.body.newItem;
 
+  const listName = req.body.list;
+
   const item = new Item({
     name: itemName,
   });
-  item.save();
-  res.redirect("/");
+
+  if (listName === "Today") {
+    item.save();
+    res.redirect("/");
+  } else {
+    List.findOne({ name: listName }, function (err, foundList) {
+      foundList.items.push();
+      foundList.save();
+      res.redirect("/" + listName);
+    });
+  }
 });
 
 // Deleting items from todolist
 app.post("/delete", function (req, res) {
   const checkedItemId = req.body.checkbox;
+  const listName = req.body.listName;
 
-  Item.findByIdAndRemove(checkedItemId, function (err) {
-    if (!err) {
-      console.log("Successfully deleted checked item");
-      res.redirect("/");
-    }
-  });
+  if (listName === "Today") {
+    Item.findByIdAndRemove(checkedItemId, function (err) {
+      if (!err) {
+        console.log("Successfully deleted checked item");
+        res.redirect("/");
+      }
+    });
+  } else {
+    List.findOneAndUpdate(
+      { name: listName },
+      { $pull: { items: { _id: checkedItemId } } },
+      function (err, foundList) {
+        if (!err) {
+          res.redirect("/" + listName);
+        }
+      }
+    );
+  }
 });
 
 app.get("/about", function (req, res) {
