@@ -26,7 +26,7 @@ _Mongoose_.
 
 - Database
 
-To create a database using Mongodb Atlas and connect to you application, visit [mongodb Atlas](https://www.mongodb.com/basics/mongodb-atlas-tutorial)
+To create a database using Mongodb Atlas and connect to your application, visit [mongodb Atlas](https://www.mongodb.com/basics/mongodb-atlas-tutorial)
 and follow the documentation.
 
 ## Deployment
@@ -62,5 +62,10 @@ You can also view this project at https://shrouded-brook-26049.herokuapp.com/.
 
 
 ### Screenshots
+
+<img src ="Screen Shot 1.png" width="500px">    <img src ="Screen Shot 2.png" width="500px">
+
+
+<img src ="Screen Shot 3.png" width="500px">    <img src ="Screen Shot 4.png" width="500px">
 
 
