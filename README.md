@@ -13,7 +13,7 @@ write their daily activities and cross them out (delete) as they complete specif
 - Tech Stack
 
 The tech stack used in building this project includes; 
-HTML, CSS, JavaScript, [node.js](nodejs.com), [Express.js](expressjs.com) and [Mongodb](mongodb.com) (Mongoose).
+HTML, CSS, JavaScript, [node.js](nodejs.com), [Express.js](expressjs.com) and [Mongodb Atlas](mongodb.com) (Mongoose).
 
 - Dependencies
 
@@ -23,6 +23,11 @@ _Ejs_,
 _lodash_,
 _Mongoose_.
 
+
+- Database
+
+To create a database using Mongodb Atlas and connect to you application, visit [mongodb Atlas](https://www.mongodb.com/basics/mongodb-atlas-tutorial)
+and follow the documentation.
 
 ## Deployment
 
@@ -54,3 +59,8 @@ Open http://localhost:3000/ to view project in browser.
 
 ## URL
 You can also view this project at https://shrouded-brook-26049.herokuapp.com/.
+
+
+### Screenshots
+
+
