@@ -12,7 +12,7 @@ write their daily activities and cross them out (delete) as they complete specif
 
 - Tech Stack
 
-The tech stack used in building this project includes; 
+The tech stack used in building this project include; 
 HTML, CSS, JavaScript, [node.js](nodejs.com), [Express.js](expressjs.com) and [Mongodb Atlas](mongodb.com) (Mongoose).
 
 - Dependencies
